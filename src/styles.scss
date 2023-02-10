@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+html, body { height: 100%; }
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.cdk-virtual-scroll-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 100%;
+}
+
+mat-bottom-sheet-container,
+cdk-virtual-scroll-viewport {
+    &::-webkit-scrollbar {
+        width: 0.5em;
+    }
+     
+    &::-webkit-scrollbar-track {
+        background-color: gainsboro;
+    }
+     
+    &::-webkit-scrollbar-thumb {
+      background-color: gray;
+      height: 100px;
+    }
+}

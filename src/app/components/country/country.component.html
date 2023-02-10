@@ -1,0 +1,60 @@
+<mat-card *ngIf="country">
+    <mat-card-header>
+        <div 
+          mat-card-avatar 
+          class="avatar" 
+          [ngStyle]="{'background-image': getFlagValue()}"></div>
+        <mat-card-title>{{country.name}}</mat-card-title>
+        <mat-card-subtitle>{{country.id}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="key-value">
+        <p class="key">Currencies:</p>
+        <p class="value">{{getCurrencies()}}</p>
+      </div>
+      <div class="key-value">
+        <p class="key">Regional Blocks:</p>
+        <p class="value">{{getRegionalBlocks()}}</p>
+      </div>
+      <div class="key-value key-value-column" *ngIf="route">
+        <p class="key">Traced Route</p>
+        <p class="value">{{getTracedRoute()}}</p>
+      </div>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            See more
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+    
+        <div class="key-value">
+          <p class="key">Capital</p>
+          <p class="value">{{country.capital}}</p>
+        </div>
+        <div class="key-value">
+          <p class="key">Population</p>
+          <p class="value">{{country.population}}</p>
+        </div>
+        <div class="key-value">
+          <p class="key">Timezones</p>
+          <p class="value">{{country.timezones}}</p>
+        </div>
+        <div class="key-value">
+          <p class="key">Languages</p>
+          <p class="value">{{getLanguages()}}</p>
+        </div>
+        <div class="key-value">
+          <p class="key">Bordering Countries</p>
+          <p class="value">{{country.borders}}</p>
+        </div>
+      </mat-expansion-panel>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button (click)="handleTraceRoute()">
+            <mat-icon>directions</mat-icon> TRACE ROUTE
+        </button>
+    </mat-card-actions>
+    <mat-card-footer *ngIf="loading">
+      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    </mat-card-footer>
+</mat-card>

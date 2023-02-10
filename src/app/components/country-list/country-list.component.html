@@ -1,0 +1,3 @@
+<cdk-virtual-scroll-viewport appendOnly itemSize="50">
+    <app-country *cdkVirtualFor="let country of store.view$ | async" [country]="country"></app-country>
+</cdk-virtual-scroll-viewport>

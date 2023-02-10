@@ -1,0 +1,18 @@
+:host {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    background-color: #424242;
+    align-items: center;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.name-field {
+    width: 70%;
+}
+
+.symbol-field,
+.currency-field {
+    width: 15%;
+}

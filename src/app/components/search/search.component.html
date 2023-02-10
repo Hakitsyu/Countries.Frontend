@@ -1,0 +1,14 @@
+<ng-container [formGroup]="form">
+    <mat-form-field appearance="fill" class="name-field">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name">
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="symbol-field">
+        <mat-label>Symbol</mat-label>
+        <input matInput formControlName="symbol">
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="currency-field">
+        <mat-label>Currency</mat-label>
+        <input matInput formControlName="currency">
+    </mat-form-field>
+</ng-container>

@@ -1,0 +1,11 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+    width: 100%;
+}
+
+cdk-virtual-scroll-viewport {
+    width: 100%;
+    min-height: 500px;
+}

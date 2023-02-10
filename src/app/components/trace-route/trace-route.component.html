@@ -1,0 +1,7 @@
+<mat-nav-list>
+    <app-trace-route-country 
+    *ngFor="let country of store.countries$ | async"
+    [country]="country"
+    (selectedCountry)="handleSelectedCountry($event)">
+    </app-trace-route-country>
+</mat-nav-list>

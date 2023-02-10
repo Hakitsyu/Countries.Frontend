@@ -1,0 +1,31 @@
+.avatar {
+    background-image: url('https://flagcdn.com/br.svg');
+    background-size: cover;
+}
+
+.mat-card-avatar {
+    height: 55px;
+    width: 80px;
+    border-radius: 5px;
+}
+
+.mat-expansion-panel:not([class*=mat-elevation-z]) {
+    box-shadow: none;
+}
+
+.mat-button {
+    display: flex;
+}
+
+.key-value {
+    display: flex;
+    gap: 1rem;
+    
+    .key {
+        font-weight: 500;
+    }
+}
+
+.key-value-column {
+    flex-direction: column;
+}

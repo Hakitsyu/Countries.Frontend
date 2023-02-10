@@ -1,0 +1,13 @@
+:host {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.title {
+    font-weight: 500;
+}
